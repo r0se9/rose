@@ -3,7 +3,7 @@ let ctx = cnv.getContext("2d");
 
 let img = new Image();
 img.crossOrigin = "anonymous";
-img.src = "https://cywarr.github.io/small-shop/rose.jpg";
+img.src = "/rose.jpg";
 img.onload = () => {
   console.log(img);
 
@@ -26,8 +26,6 @@ img.onload = () => {
   function resize() {
     ctx.canvas.height = innerHeight * 0.95;
     ctx.canvas.width = ctx.canvas.height * canvasRatio;
-    ctx.canvas.style.border = `${uY(1)}px solid #401`;
-    ctx.canvas.style.borderRadius = `${uY(10)}px`;
     ctx.fillStyle = "black";
     //ctx.fillRect(0, 0, uX(100), uY(100));
   }
@@ -50,7 +48,7 @@ img.onload = () => {
     init() {
       this.x = Math.random() * 100;
       this.y = 0; //Math.random() * 100;
-      this.speed = Math.random() * 0.3 + 0.2;
+      this.speed = Math.random() * 0.6 + 0.4;
     }
     getData() {
       let x = Math.floor(this.x * 0.01 * imgSize.x);
